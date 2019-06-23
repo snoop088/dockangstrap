@@ -33,3 +33,14 @@ services:
     volumes:
       - ./db:/data/db
     restart: always
+  front:
+    build: ./front
+    image: angular:8
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./front/src:/usr/src/app/src
+    ports:
+      - 4200:4200
+    depends_on:
+      - api

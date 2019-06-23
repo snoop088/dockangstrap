@@ -1,0 +1,7 @@
+/db
+/strapi-app
+/node_modules
+/dist
+
+front/node_modules
+front/dist
